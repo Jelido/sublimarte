@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imgs/sublimarte-logo.png" type="image/png">
+    <title>SublimARTE</title>
+</head>
+<body>
+    <img src="imgs/cobach-chiapas-logo.png" alt="Logo de COBACH" class="logo_1">
+
+    <img src="imgs/sublimarte-logo.png" alt="Logo de SublimARTE" class="logo_2">
+
+
+    <h1>SublimARTE</h1>
+
+    <h3>¿Alguna vez te has preguntado qué es la sublimación?</h3>
+        <p>En el Plantel 11 San Cristóbal nos dispusimos a investigar sobre este fenómeno físico, y sus aplicaciones en el arte.</p>
+
+    <h2>¿Qué es SublimARTE?</h2>
+        <p>SublimARTE es un proyecto de ciencia y tecnología que nace de la curiosidad por entender el fenomeno de la sublimación y su aplicación en el arte. En este proyecto realizamos una investigación con el fin de elaborar nuestra propia maquina de sublimación de tazas casera y entender su funcionamiento.</p>
+
+    <h2>¿Qué es la sublimación?</h2>
+        <p>La sublimación es un proceso físico en el cual una sustancia pasa directamente de estado sólido a estado gaseoso sin pasar por el estado líquido, al proceso inverso se le denomina deposición o sublimación inversa.</p>
+        <p>Puedes sublimar cosas como tazas de cerámica, camisetas, termos y otros objetos con la ayuda de una máquina de sublimación ¡Que puedes hacer tú mismo!</p>
+
+    <h3>Y para sublimar necesitas:</h3>
+    <ul>
+        <li class="reveal">Tazas de cerámica para sublimación</li>
+        <p class="reveal">Estas tazas tienen un recubrimiento de polímero</p>
+
+        <li class="reveal">Hojas de impresión</li>
+        <p class="reveal">Contienen la imagen que se va a sublimar</p>
+
+        <li class="reveal">Prensas</li>
+        <p class="reveal">Con ellas se aplica presión para transferir la imagen a la taza y evitar una mala calidad de impresión
+        </p>
+
+        <li class="reveal">Temperatura: 180°C</li>
+        <p class="reveal">Con ayuda de un emisor de energía térmica como una resistencia electrica o un foco incandescente</p>
+
+        <li class="reveal">180 Segundos</li>
+        <p class="reveal">Es el tiempo necesario para que la tinta se adhiera a la taza despues de haber alcanzado los 180°C</p>
+    </ul>
+
+    <p class="recorda"> Gracias por visitar nuestro sitio web, es muy importante para nosotros contar con tu apoyo. Si tienes alguna duda, puedes preguntarnos.</p>
+
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            }));
+        }, {
+            threshold: 0.1
+        });
+
+        const elements = document.querySelectorAll('.reveal');
+        elements.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

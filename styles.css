@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --color-primario: #2985e2;
+    --color-secundario: #ff6584;
+    --fondo: #eee;
+    --texto: #2d3436;
+    --blanco: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor invisible para limitar el ancho en pantallas grandes */
+body > * {
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: var(--color-primario);
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--color-secundario);
+    border-left: 5px solid var(--color-primario);
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #444;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+/* Estilizando la lista de materiales */
+ul {
+    background: var(--blanco);
+    backdrop-filter: blur(10px);
+    padding: 20px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    list-style: none;
+}
+
+ul li {
+    font-weight: 700;
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+ul p {
+    font-weight: 400;
+    color: #636e72;
+    font-size: 0.95rem;
+    margin: 0 5px;
+}
+
+/* Clase especial para el pie de página */
+.recorda {
+    background: var(--color-primario);
+    color: #eee;
+    padding: 25px 5px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 300;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.logo_1 {
+    width: 20%;
+    max-width: 120px;
+    height: auto;
+    position: absolute;
+    top: 1.5%;
+    right: 2%;
+}
+
+.logo_2 {
+    width: 18%;
+    max-width: 90px;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
