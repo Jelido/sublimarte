@@ -8,11 +8,14 @@
     --blanco: rgba(255, 255, 255, 0.7);
 }
 
+html {
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc 100%);
+    min-height: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #e0c3fc, #8ec5fc 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
+    background: transparent;
     margin: 0;
     color: var(--texto);
     line-height: 1.6;
@@ -34,6 +37,17 @@ h1 {
     font-size: 3rem;
     text-align: center;
     text-decoration: underline;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.pag_2 {
+    color: var(--color-primario);
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: none;
     font-style: italic;
     letter-spacing: 2px;
     margin-top: 60px;
@@ -124,19 +138,73 @@ ul p {
     left: 2%;
 }
 
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
 }
 
-.galeria img {
-    width: 100%;
-    border-radius: 15px;
+.targeta-producto{
+    background: var(--blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 250px;
     transition: transform 0.3s ease;
 }
 
-.galeria img:hover {
-    transform: scale(1.05);
+.targeta-producto :hover {
+    transform: translateY(-5px);
+}
+
+.targeta-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-producto {
+    padding: 20px;
+}
+
+.info-producto h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.info-producto p {
+    font-size: 0.9rem;
+    color: var(--color-secundario)
+}
+
+.precio {
+    font-weight: 700;
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+}
+
+.boton-navegacion {
+    height: auto;
+    width: 200px;
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--color-primario);
+    color: white !important;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+    transition: all 0.3s ease;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.boton-navegacion:hover {
+    background-color: var(--color-secundario);
+    box-shadow: 0 6px 20px rgba(255, 101, 132, 0.4);
+    transform: translateY(-3px);
+    cursor: pointer;
 }
