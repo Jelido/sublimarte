@@ -167,6 +167,9 @@ ul p {
 
 .info-producto {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .info-producto h3 {
@@ -176,13 +179,23 @@ ul p {
 
 .info-producto p {
     font-size: 0.9rem;
-    color: var(--color-secundario)
+    color: var(--color-secundario);
 }
 
 .precio {
     font-weight: 700;
     color: var(--color-secundario);
-    font-size: 1.1rem;
+    font-size: 1.6rem;
+    margin-top: 15px;
+    align-self: flex-end;
+}
+
+.precio sup {
+    font-size: 0.8rem;
+    text-decoration: none;
+    vertical-align: 10px;
+    margin-left: 2px;
+    font-weight: 500;
 }
 
 .boton-navegacion {
